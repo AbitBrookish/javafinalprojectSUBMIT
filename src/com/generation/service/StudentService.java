@@ -26,15 +26,20 @@ public class StudentService
 
     public void showSummary()
     {
-        // reference the CourseServices class ln81-86
-        //TODO implement
         //print out the student credentials and enrolled classes
         //iterate through student values
-        for (Student student : students.values()){
-            System.out.println("Student Name: " + student.getName());
-            System.out.println("Student ID: " + student.getId());
-            System.out.println("Student courses: " + student.getClass());
+        System.out.println( "Students: " );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            System.out.println( student );
         }
+        // reference the CourseServices class ln81-86
+        //TODO implement
+//        for (Student student : students.values()){
+//            System.out.println("Student Name: " + student.getName());
+//            System.out.println("Student ID: " + student.getId());
+//            System.out.println("Student courses: " + student.getClass());
     }
 
     public void enrollToCourse( String studentId, Course course )
